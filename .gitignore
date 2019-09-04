@@ -4,3 +4,4 @@
 /node_modules
 /public_html/index.php
 /public_html/dist
+.gitsecret/keys/random_seed
