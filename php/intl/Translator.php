@@ -29,4 +29,27 @@ class Translator {
     public function getTranslatedString(string $key): string  {
         return $this->resourceBundle->get($key);
     }
+
+    /**
+     * static method to determine the best locale to use
+     *
+     * @return string locale automagically determined
+     */
+    public static function getLocale() {
+        // try session or cookies first
+        $acceptedLocales = ["en", "es"];
+        $sessionLocale = $_SESSION["locale"] ?? $_COOKIE["locale"];
+        if (in_array($sessionLocale, $acceptedLocales) === true) {
+            return $sessionLocale;
+        }
+
+        // try HTTP headers instead
+        $httpLocale = \Locale::acceptFromHttp($_SERVER["HTTP_ACCEPT_LANGUAGE"]) ?? "es_MX";
+        $locale = \Locale::getPrimaryLanguage($httpLocale);
+        if (in_array($locale, $acceptedLocales) === true) {
+            // default fallback
+            $locale = "es";
+        }
+        return $locale;
+    }
 }
