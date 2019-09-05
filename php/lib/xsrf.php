@@ -35,6 +35,7 @@ if(function_exists("apache_request_headers") === false) {
  *
  * @param string $cookiePath path the cookie is relevant to, root by default
  * @throws RuntimeException if the session is not active
+ * @throws Exception if random bytes cannot be generated
  **/
 function setXsrfCookie($cookiePath = "/") {
 	// enforce that the session is active
@@ -44,7 +45,7 @@ function setXsrfCookie($cookiePath = "/") {
 
 	// if the token does not exist, create one and send it in a cookie
 	if(empty($_SESSION["XSRF-TOKEN"]) === true) {
-		$_SESSION["XSRF-TOKEN"] = hash("sha512", session_id() . bin2hex(openssl_random_pseudo_bytes(16)));
+		$_SESSION["XSRF-TOKEN"] = hash("sha512", session_id() . bin2hex(random_bytes(16)));
 	}
 	setcookie("XSRF-TOKEN", $_SESSION["XSRF-TOKEN"], 0, $cookiePath);
 }
@@ -53,7 +54,7 @@ function setXsrfCookie($cookiePath = "/") {
  * verifies the X-XSRF-TOKEN sent by Angular matches the XSRF-TOKEN saved in this session.
  * This function returns nothing, but will throw an exception when something does not match
  *
- * @see https://code.angularjs.org/1.4.2/docs/api/ng/service/$http Angular $http service
+ * @see https://angular.io/guide/http Angular HttpClient documentation
  * @throws InvalidArgumentException when tokens do not match
  * @throws RuntimeException if the session is not active
  **/
