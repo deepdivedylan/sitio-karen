@@ -13,7 +13,6 @@ if (empty($_SESSION["locale"]) === true) {
     $locale = $_SESSION["locale"];
 }
 $translator = new Translator($locale);
-
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $locale;?>">
