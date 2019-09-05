@@ -51,11 +51,12 @@ class Translator {
         }
 
         // try HTTP headers instead
-        $httpLocale = \Locale::acceptFromHttp($_SERVER["HTTP_ACCEPT_LANGUAGE"]) ?? "es_MX";
+        $defaultLocale = "es_MX";
+        $httpLocale = \Locale::acceptFromHttp($_SERVER["HTTP_ACCEPT_LANGUAGE"]) ?? $defaultLocale;
         $locale = \Locale::getPrimaryLanguage($httpLocale);
         if (in_array($locale, self::ACCEPTED_LOCALES) === false) {
             // default fallback
-            $locale = "es";
+            $locale = \Locale::getPrimaryLanguage($defaultLocale);
         }
         return $locale;
     }
