@@ -3,6 +3,7 @@
 		"google/recaptcha": "@stable",
 		"mailgun/mailgun-php": "@stable",
 		"php-http/guzzle6-adapter": "@stable",
-		"ext-intl": "*"
-    }
+		"ext-intl": "*",
+		"ext-json": "*"
+	}
 }
