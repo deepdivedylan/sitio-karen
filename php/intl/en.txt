@@ -1,3 +1,5 @@
 en {
-    hi { "Hi" }
+	changeLocale { "Espa&ntilde;ol" }
+	hi { "Hi" }
+	imgFlag { "/images/flag-mx.svg" }
 }

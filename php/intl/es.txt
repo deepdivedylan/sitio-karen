@@ -1,3 +1,5 @@
 es {
-    hi { "hola" }
+	changeLocale { "English" }
+	hi { "hola" }
+	imgFlag { "/images/flag-us.svg" }
 }
