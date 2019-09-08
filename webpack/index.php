@@ -1,9 +1,11 @@
 <?php
+require_once(dirname(__DIR__) . "/php/lib/xsrf.php");
 require_once(dirname(__DIR__) . "/php/intl/Translator.php");
 
 if(session_status() !== PHP_SESSION_ACTIVE) {
 	session_start();
 }
+setXsrfCookie();
 
 if (empty($_SESSION["locale"]) === true) {
     $locale = Translator::getLocale();
@@ -17,9 +19,42 @@ $translator = new Translator($locale);
 <!DOCTYPE html>
 <html lang="<?php echo $locale;?>">
 	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title><?php echo $translator->getTranslatedString("hi"); ?></title>
 	</head>
 	<body>
-        <h1><?php echo $translator->getTranslatedString("hi"); ?></h1>
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+			<a class="navbar-brand" href="#">Fixed navbar</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#">Disabled</a>
+					</li>
+				</ul>
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<span class="nav-link" id="localeLink"><img class="flag-icon" src="<?php echo $translator->getTranslatedString("imgFlag"); ?>" /> <?php echo $translator->getTranslatedString("changeLocale"); ?></span>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<main role="main" class="container">
+			<div class="jumbotron">
+				<h1>Navbar example</h1>
+				<p class="lead"><?php echo $translator->getTranslatedString("hi"); ?></p>
+				<a class="btn btn-lg btn-primary" href="/docs/4.3/components/navbar/" role="button">View navbar docs &raquo;</a>
+			</div>
+		</main>
 	</body>
 </html>

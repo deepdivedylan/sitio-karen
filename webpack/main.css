@@ -1,5 +1,10 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
-.fuzzy {
-	color: orange;
+body {
+	min-height: 75rem;
+	padding-top: 4.5rem;
+}
+
+.flag-icon {
+	height: 1.0em;
 }
