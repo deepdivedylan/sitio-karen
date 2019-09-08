@@ -6,6 +6,7 @@ const webpack = require('webpack');
 module.exports = {
 	entry: {
 		'vendor': helpers.root('webpack') + '/vendor.js',
+		'app': helpers.root('webpack') + '/app.js',
 		'css': helpers.root('webpack') + '/main.css'
 	},
 
