@@ -27,7 +27,7 @@ $translator = new Translator($locale);
 		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 			<a class="navbar-brand" href="#">Fixed navbar</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
+				<i class="fas fa-bars"></i>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 				<ul class="navbar-nav mr-auto">
@@ -55,6 +55,32 @@ $translator = new Translator($locale);
                 <p class="lead"><?php echo $translator->getTranslatedString("title"); ?></p>
 				<a class="btn btn-lg btn-primary" href="/docs/4.3/components/navbar/" role="button">View navbar docs &raquo;</a>
 			</div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-balance-scale"></i> One</h3>
+                            <p class="card-text">feel the fuzzy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-passport"></i> Two</h3>
+                            <p class="card-text">feel the fuzzy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-handshake"></i> Three</h3>
+                            <p class="card-text">feel the fuzzy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 		</main>
 	</body>
 </html>
