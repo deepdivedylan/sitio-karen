@@ -21,7 +21,7 @@ $translator = new Translator($locale);
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title><?php echo $translator->getTranslatedString("hi"); ?></title>
+		<title><?php echo $translator->getTranslatedString("title"); ?></title>
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -51,8 +51,8 @@ $translator = new Translator($locale);
 
 		<main role="main" class="container">
 			<div class="jumbotron">
-				<h1>Navbar example</h1>
-				<p class="lead"><?php echo $translator->getTranslatedString("hi"); ?></p>
+				<h1><?php echo $translator->getTranslatedString("title"); ?></h1>
+                <p class="lead"><?php echo $translator->getTranslatedString("title"); ?></p>
 				<a class="btn btn-lg btn-primary" href="/docs/4.3/components/navbar/" role="button">View navbar docs &raquo;</a>
 			</div>
 		</main>

@@ -1,5 +1,5 @@
 en {
 	changeLocale { "Espa&ntilde;ol" }
-	hi { "Hi" }
+	title { "Corporativo Juridico Internacional" }
 	imgFlag { "/images/flag-mx.svg" }
 }
