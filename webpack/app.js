@@ -1,5 +1,3 @@
-import Cookies from 'js-cookie';
-
 export const ACCEPTED_LOCALES = ['en', 'es'];
 export const DEFAULT_LOCALE = 'es';
 
