@@ -2,6 +2,7 @@ import 'popper.js';
 import 'jquery';
 import 'bootstrap';
 import 'js-cookie';
+import 'validate.js';
 
 // loading FontAwesome like this reduces page loads by 1 MB :scream_cat:
 import { dom, library } from '@fortawesome/fontawesome-svg-core';
