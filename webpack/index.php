@@ -8,11 +8,11 @@ if(session_status() !== PHP_SESSION_ACTIVE) {
 setXsrfCookie();
 
 if (empty($_SESSION["locale"]) === true) {
-    $locale = Translator::getLocale();
-    $_SESSION["locale"] = $locale;
-    setcookie("locale", $locale, time() + 2592000); // 30 day cookie
+	$locale = Translator::getLocale();
+	$_SESSION["locale"] = $locale;
+	setcookie("locale", $locale, time() + 2592000); // 30 day cookie
 } else {
-    $locale = $_SESSION["locale"];
+	$locale = $_SESSION["locale"];
 }
 $translator = new Translator($locale);
 ?>
@@ -52,35 +52,41 @@ $translator = new Translator($locale);
 		<main role="main" class="container">
 			<div class="jumbotron">
 				<h1><?php echo $translator->getTranslatedString("title"); ?></h1>
-                <p class="lead"><?php echo $translator->getTranslatedString("title"); ?></p>
+				<p class="lead"><?php echo $translator->getTranslatedString("title"); ?></p>
 				<a class="btn btn-lg btn-primary" href="/docs/4.3/components/navbar/" role="button">View navbar docs &raquo;</a>
 			</div>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h3 class="card-title"><i class="fas fa-balance-scale"></i> One</h3>
-                            <p class="card-text">feel the fuzzy</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h3 class="card-title"><i class="fas fa-passport"></i> Two</h3>
-                            <p class="card-text">feel the fuzzy</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h3 class="card-title"><i class="fas fa-handshake"></i> Three</h3>
-                            <p class="card-text">feel the fuzzy</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card shadow-sm">
+						<div class="card-header">
+							<h3 class="card-title"><i class="fas fa-balance-scale"></i> <?php echo $translator->getTranslatedString("cardOneTitle"); ?></h3>
+						</div>
+						<div class="card-body">
+							<p class="card-text"><? echo $translator->getTranslatedString("cardOneText"); ?></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card shadow-sm">
+						<div class="card-header">
+							<h3 class="card-title"><i class="fas fa-passport"></i> <?php echo $translator->getTranslatedString("cardTwoTitle"); ?></h3>
+						</div>
+						<div class="card-body">
+							<p class="card-text"><?php echo $translator->getTranslatedString("cardTwoText"); ?></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card shadow-sm">
+						<div class="card-header">
+							<h3 class="card-title"><i class="fas fa-handshake"></i> <?php echo $translator->getTranslatedString("cardThreeTitle"); ?></h3>
+						</div>
+						<div class="card-body">
+							<p class="card-text"><?php echo $translator->getTranslatedString("cardThreeText"); ?></p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</main>
 	</body>
 </html>
