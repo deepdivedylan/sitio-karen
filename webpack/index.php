@@ -15,6 +15,7 @@ if (empty($_SESSION["locale"]) === true) {
 	$locale = $_SESSION["locale"];
 }
 $translator = new Translator($locale);
+$recaptcha = json_decode($_ENV["RECAPTCHA"]);
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $locale;?>">
@@ -55,7 +56,7 @@ $translator = new Translator($locale);
 				<p class="lead"><?php echo $translator->getTranslatedString("title"); ?></p>
 				<a class="btn btn-lg btn-primary" href="/docs/4.3/components/navbar/" role="button">View navbar docs &raquo;</a>
 			</div>
-			<div class="row">
+			<div class="mt-3 row">
 				<div class="col-md-4">
 					<div class="card shadow-sm">
 						<div class="card-header">
@@ -87,6 +88,48 @@ $translator = new Translator($locale);
 					</div>
 				</div>
 			</div>
+			<h2 class="mt-3"><?php echo $translator->getTranslatedString("contactFormTitle"); ?></h2>
+			<form id="contactForm">
+				<div class="form-group">
+					<label for="contactName"><?php echo $translator->getTranslatedString("contactName"); ?></label>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user" aria-hidden="true"></i></span>
+						</div>
+						<input id="contactName" name="contactName" type="text" class="form-control" placeholder="<?php echo $translator->getTranslatedString("contactName"); ?>" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="contactEmail"><?php echo $translator->getTranslatedString("contactEmail"); ?></label>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+						</div>
+						<input id="contactEmail" name="contactEmail" type="email" class="form-control" placeholder="<?php echo $translator->getTranslatedString("contactEmail"); ?>" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="contactSubject"><?php echo $translator->getTranslatedString("contactSubject"); ?></label>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-pencil-alt" aria-hidden="true"></i></span>
+						</div>
+						<input id="contactSubject" name="contactSubject" class="form-control" placeholder="<?php echo $translator->getTranslatedString("contactSubject"); ?>" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="contactMessage"><?php echo $translator->getTranslatedString("contactMessage"); ?></label>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-pencil-alt" aria-hidden="true"></i></span>
+						</div>
+						<textarea id="contactMessage" name="contactMessage" class="form-control" placeholder="<?php echo $translator->getTranslatedString("contactMessage"); ?>" rows="5"></textarea>
+					</div>
+				</div>
+				<div class="g-recaptcha" data-sitekey="<?php echo $recaptcha->siteKey; ?>"></div>
+				<button class="btn btn-success" type="submit"><i class="fa fa-paper-plane"></i> Send</button>
+				<button class="btn btn-warning" type="reset"><i class="fa fa-ban"></i> Reset</button>
+			</form>
 		</main>
 	</body>
 </html>

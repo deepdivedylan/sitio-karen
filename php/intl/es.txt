@@ -8,4 +8,9 @@ es {
 	cardOneTitle { "Asesor&iacute;a Legal" }
 	cardTwoTitle { "Asuntos Migratorios" }
 	cardThreeTitle { "Atención Personalizada" }
+	contactFormTitle { "Contacto" }
+	contactEmail { "Correo Electr&oacute;nico" }
+	contactName { "Nombre" }
+	contactMessage { "Message" }
+	contactSubject { "Asunto" }
 }

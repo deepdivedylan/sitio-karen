@@ -8,4 +8,9 @@ en {
 	cardOneTitle { "Legal Representation" }
 	cardTwoTitle { "Immigration Services" }
 	cardThreeTitle { "Personal Service" }
+	contactFormTitle { "Contact Us" }
+	contactEmail { "Email" }
+	contactName { "Name" }
+	contactMessage { "Message" }
+	contactSubject { "Subject" }
 }
