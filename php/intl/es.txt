@@ -1,6 +1,7 @@
 es {
 	changeLocale { "English" }
 	title { "Corporativo Juridico Internacional" }
+	home { "Inicio" }
 	lead { "Asesor&iacute;a Migratoria Experimentada" }
 	imgFlag { "/images/flag-us.svg" }
 	cardOneText { "Run a manual sweep of anomalous airborne or electromagnetic readings. Radiation levels in our atmosphere have increased by 3,000 percent. Electromagnetic and subspace wave fronts approaching synchronization. What is the strength of the ship's deflector shields at maximum output? The wormhole's size and short period would make this a local phenomenon. Do you have sufficient data to compile a holographic simulation?" }

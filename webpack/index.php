@@ -33,14 +33,11 @@ $recaptcha = json_decode($_ENV["RECAPTCHA"]);
 			</button>
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					<li class="nav-item">
+						<a class="nav-link" href="#home"><i class="fas fa-home"></i> <?php echo $translator->getTranslatedString("home"); ?></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Link</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link disabled" href="#">Disabled</a>
+						<a class="nav-link" href="#contact"><i class="fas fa-paper-plane"></i> <?php echo $translator->getTranslatedString("contactFormTitle"); ?></a>
 					</li>
 				</ul>
 				<ul class="navbar-nav">
@@ -56,7 +53,7 @@ $recaptcha = json_decode($_ENV["RECAPTCHA"]);
 				<h1><?php echo $translator->getTranslatedString("title"); ?></h1>
 				<p class="lead"><?php echo $translator->getTranslatedString("lead"); ?></p>
 			</div>
-			<div class="mt-3 row">
+			<div id="home" class="mt-3 row">
 				<div class="col-md-4">
 					<div class="card shadow-sm">
 						<div class="card-header">
@@ -88,7 +85,7 @@ $recaptcha = json_decode($_ENV["RECAPTCHA"]);
 					</div>
 				</div>
 			</div>
-			<h2 class="mt-3"><?php echo $translator->getTranslatedString("contactFormTitle"); ?></h2>
+			<h2 id="contact" class="mt-3"><?php echo $translator->getTranslatedString("contactFormTitle"); ?></h2>
 			<form id="contactForm" novalidate>
 				<div class="form-group">
 					<label for="contactName"><?php echo $translator->getTranslatedString("contactName"); ?></label>
