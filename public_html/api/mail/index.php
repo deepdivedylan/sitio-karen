@@ -41,10 +41,10 @@ try {
 		}
 
 		// sanitize inputs
-		$name = filter_var($requestObject->name, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
-		$email = filter_var($requestObject->email, FILTER_SANITIZE_EMAIL);
-		$subject = filter_var($requestObject->subject, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
-		$message = filter_var($requestObject->message, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
+		$name = filter_var($requestObject->contactName, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
+		$email = filter_var($requestObject->contactEmail, FILTER_SANITIZE_EMAIL);
+		$subject = filter_var($requestObject->contactSubject, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
+		$message = filter_var($requestObject->contactMessage, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
 
 		// throw out blank fields
 		if(empty($name) === true) {
