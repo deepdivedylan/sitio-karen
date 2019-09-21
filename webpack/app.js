@@ -32,7 +32,7 @@ export const resetForm = () => {
 
 export const updateFormOutput = (contextualClass, message) => {
 	const outputArea = document.getElementById('outputArea');
-	outputArea.classList.remove(...['alert-success', 'alert-danger', 'd-none']);
+	outputArea.classList.remove('alert-success', 'alert-danger', 'd-none');
 	outputArea.classList.add(contextualClass);
 	outputArea.innerText = message;
 };
@@ -65,7 +65,7 @@ export const validateContactForm = (event) => {
 			resetForm();
 			if(httpReply.ok === true) {
 				httpReply.json().then(reply => {
-					const contextualClass = reply.status === 200 ? "alert-success" : "alert-danger";
+					const contextualClass = reply.status === 200 ? 'alert-success' : 'alert-danger';
 					updateFormOutput(contextualClass, reply.message);
 				});
 			} else {
