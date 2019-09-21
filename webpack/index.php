@@ -134,6 +134,7 @@ $recaptcha = json_decode($_ENV["RECAPTCHA"]);
 				<button class="btn btn-success" type="submit"><i class="fa fa-paper-plane"></i> Send</button>
 				<button id="resetButton" class="btn btn-warning" type="reset"><i class="fa fa-ban"></i> Reset</button>
 			</form>
+			<div id="outputArea" class="alert"></div>
 		</main>
 	</body>
 </html>
