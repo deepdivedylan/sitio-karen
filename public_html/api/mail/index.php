@@ -61,8 +61,7 @@ try {
 		}
 
 		// start the mailgun client
-		$client = new \Http\Adapter\Guzzle6\Client();
-		$mailgun = new \Mailgun\Mailgun($mailgunConfig->apiKey, $client);
+		$mailgun = \Mailgun\Mailgun::create($mailgunConfig->apiKey);
 
 		// send the message
 		$result = $mailgun->sendMessage($mailgunConfig->domain, [
