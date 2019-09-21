@@ -98,7 +98,7 @@ $recaptcha = json_decode($_ENV["RECAPTCHA"]);
 						</div>
 						<input id="contactName" name="contactName" type="text" class="form-control" placeholder="<?php echo $translator->getTranslatedString("contactName"); ?>" required />
 					</div>
-					<p id="contactNameMessage" class="message"><?php echo $translator->getTranslatedString("contactNameMessage"); ?></p>
+					<p id="contactNameMessage" class="alert alert-danger message mt-3"><?php echo $translator->getTranslatedString("contactNameMessage"); ?></p>
 				</div>
 				<div class="form-group">
 					<label for="contactEmail"><?php echo $translator->getTranslatedString("contactEmail"); ?></label>
@@ -108,7 +108,7 @@ $recaptcha = json_decode($_ENV["RECAPTCHA"]);
 						</div>
 						<input id="contactEmail" name="contactEmail" type="email" class="form-control" placeholder="<?php echo $translator->getTranslatedString("contactEmail"); ?>" required />
 					</div>
-					<p id="contactEmailMessage" class="message"><?php echo $translator->getTranslatedString("contactEmailMessage"); ?></p>
+					<p id="contactEmailMessage" class="alert alert-danger message mt-3"><?php echo $translator->getTranslatedString("contactEmailMessage"); ?></p>
 				</div>
 				<div class="form-group">
 					<label for="contactSubject"><?php echo $translator->getTranslatedString("contactSubject"); ?></label>
@@ -118,7 +118,7 @@ $recaptcha = json_decode($_ENV["RECAPTCHA"]);
 						</div>
 						<input id="contactSubject" name="contactSubject" class="form-control" placeholder="<?php echo $translator->getTranslatedString("contactSubject"); ?>" required />
 					</div>
-					<p id="contactSubjectMessage" class="message"><?php echo $translator->getTranslatedString("contactSubjectMessage"); ?></p>
+					<p id="contactSubjectMessage" class="alert alert-danger message mt-3"><?php echo $translator->getTranslatedString("contactSubjectMessage"); ?></p>
 				</div>
 				<div class="form-group">
 					<label for="contactMessage"><?php echo $translator->getTranslatedString("contactMessage"); ?></label>
@@ -128,7 +128,7 @@ $recaptcha = json_decode($_ENV["RECAPTCHA"]);
 						</div>
 						<textarea id="contactMessage" name="contactMessage" class="form-control" placeholder="<?php echo $translator->getTranslatedString("contactMessage"); ?>" rows="5" required></textarea>
 					</div>
-					<p id="contactMessageMessage" class="message"><?php echo $translator->getTranslatedString("contactMessageMessage"); ?></p>
+					<p id="contactMessageMessage" class="alert alert-danger message mt-3"><?php echo $translator->getTranslatedString("contactMessageMessage"); ?></p>
 				</div>
 				<div class="g-recaptcha" data-sitekey="<?php echo $recaptcha->siteKey; ?>"></div>
 				<button class="btn btn-success" type="submit"><i class="fa fa-paper-plane"></i> Send</button>

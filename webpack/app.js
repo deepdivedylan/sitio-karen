@@ -22,20 +22,22 @@ export const switchLocale = () => {
 };
 
 export const resetForm = () => {
-	const inputs = document.getElementsByName('form-control');
-	for(let input of inputs) {
-		input.value = '';
-		document.getElementById(`${input}Message`).css.display = 'hidden';
+	const messages = document.getElementsByClassName('message');
+	document.getElementById('contactForm').reset();
+	for(let message of messages) {
+		message.classList.add('d-none');
 	}
 };
 
 export const validateContactForm = (event) => {
 	let formValid = true;
-	const inputs = document.getElementsByName('form-control');
+	const inputs = document.getElementsByClassName('form-control');
 	for(let input of inputs) {
-		if(input.validity.valid === false) {
+		if(input.validity.valid === true) {
+			document.getElementById(`${input.id}Message`).classList.add('d-none');
+		} else {
 			formValid = false;
-			document.getElementById(`${input.id}Message`).css.display = 'block';
+			document.getElementById(`${input.id}Message`).classList.remove('d-none');
 		}
 	}
 
@@ -52,4 +54,5 @@ window.addEventListener('DOMContentLoaded', () => {
 	document.getElementById('localeLink').addEventListener('click', switchLocale);
 	document.getElementById('contactForm').addEventListener('submit', validateContactForm);
 	document.getElementById('resetButton').addEventListener('click', resetForm);
+	resetForm();
 });

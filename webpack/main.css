@@ -9,10 +9,6 @@ body {
 	height: 1.0em;
 }
 
-.message {
-	display: none;
-}
-
 .nav-link {
 	cursor: pointer;
 }
