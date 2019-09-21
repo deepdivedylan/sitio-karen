@@ -52,8 +52,7 @@ module.exports = {
 			jquery: 'jquery',
 			'window.jquery': 'jquery',
 			Cookies: 'js-cookie',
-			Popper: ['popper.js', 'default'],
-			validate: 'validate.js'
+			Popper: ['popper.js', 'default']
 		}),
 		new MiniCSSExtractPlugin()
 	]
