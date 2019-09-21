@@ -14,4 +14,8 @@ en {
 	contactName { "Name" }
 	contactMessage { "Message" }
 	contactSubject { "Subject" }
+	contactEmailMessage { "Email is required" }
+	contactNameMessage { "Name is required" }
+	contactMessageMessage { "Message is required" }
+	contactSubjectMessage { "Subject is required" }
 }

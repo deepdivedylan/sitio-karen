@@ -12,6 +12,10 @@ es {
 	contactFormTitle { "Contacto" }
 	contactEmail { "Correo Electr&oacute;nico" }
 	contactName { "Nombre" }
-	contactMessage { "Message" }
+	contactMessage { "Mensaje" }
 	contactSubject { "Asunto" }
+	contactEmailMessage { "Correo Electr&oacute;nico es requerido" }
+	contactNameMessage { "Nombre es requerido" }
+	contactMessageMessage { "Mensaje es requerido" }
+	contactSubjectMessage { "Asunto es requerido" }
 }

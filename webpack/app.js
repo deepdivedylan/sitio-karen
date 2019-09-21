@@ -21,6 +21,35 @@ export const switchLocale = () => {
 		});
 };
 
+export const resetForm = () => {
+	const inputs = document.getElementsByName('form-control');
+	for(let input of inputs) {
+		input.value = '';
+		document.getElementById(`${input}Message`).css.display = 'hidden';
+	}
+};
+
+export const validateContactForm = (event) => {
+	let formValid = true;
+	const inputs = document.getElementsByName('form-control');
+	for(let input of inputs) {
+		if(input.validity.valid === false) {
+			formValid = false;
+			document.getElementById(`${input.id}Message`).css.display = 'block';
+		}
+	}
+
+	event.preventDefault();
+	if(formValid === true) {
+		resetForm();
+		console.log('all set!');
+	} else {
+		console.log('bad kitty');
+	}
+};
+
 window.addEventListener('DOMContentLoaded', () => {
 	document.getElementById('localeLink').addEventListener('click', switchLocale);
+	document.getElementById('contactForm').addEventListener('submit', validateContactForm);
+	document.getElementById('resetButton').addEventListener('click', resetForm);
 });
