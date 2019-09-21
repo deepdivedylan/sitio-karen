@@ -27,7 +27,7 @@ $recaptcha = json_decode($_ENV["RECAPTCHA"]);
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-			<a class="navbar-brand" href="#">Fixed navbar</a>
+			<a class="navbar-brand" href="/"><img class="nav-icon" src="/images/globe.png" /> <?php echo $translator->getTranslatedString("title"); ?></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 				<i class="fas fa-bars"></i>
 			</button>
@@ -42,7 +42,7 @@ $recaptcha = json_decode($_ENV["RECAPTCHA"]);
 				</ul>
 				<ul class="navbar-nav">
 					<li class="nav-item">
-						<span class="nav-link" id="localeLink"><img class="flag-icon" src="<?php echo $translator->getTranslatedString("imgFlag"); ?>" /> <?php echo $translator->getTranslatedString("changeLocale"); ?></span>
+						<span class="nav-link" id="localeLink"><img class="nav-icon" src="<?php echo $translator->getTranslatedString("imgFlag"); ?>" /> <?php echo $translator->getTranslatedString("changeLocale"); ?></span>
 					</li>
 				</ul>
 			</div>
