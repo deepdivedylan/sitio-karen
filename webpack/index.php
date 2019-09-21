@@ -22,6 +22,7 @@ $recaptcha = json_decode($_ENV["RECAPTCHA"]);
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 		<title><?php echo $translator->getTranslatedString("title"); ?></title>
 	</head>
 	<body>
@@ -53,8 +54,7 @@ $recaptcha = json_decode($_ENV["RECAPTCHA"]);
 		<main role="main" class="container">
 			<div class="jumbotron">
 				<h1><?php echo $translator->getTranslatedString("title"); ?></h1>
-				<p class="lead"><?php echo $translator->getTranslatedString("title"); ?></p>
-				<a class="btn btn-lg btn-primary" href="/docs/4.3/components/navbar/" role="button">View navbar docs &raquo;</a>
+				<p class="lead"><?php echo $translator->getTranslatedString("lead"); ?></p>
 			</div>
 			<div class="mt-3 row">
 				<div class="col-md-4">

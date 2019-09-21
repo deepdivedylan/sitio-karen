@@ -1,6 +1,7 @@
 es {
 	changeLocale { "English" }
 	title { "Corporativo Juridico Internacional" }
+	lead { "Asesor&iacute;a Migratoria Experimentada" }
 	imgFlag { "/images/flag-us.svg" }
 	cardOneText { "Run a manual sweep of anomalous airborne or electromagnetic readings. Radiation levels in our atmosphere have increased by 3,000 percent. Electromagnetic and subspace wave fronts approaching synchronization. What is the strength of the ship's deflector shields at maximum output? The wormhole's size and short period would make this a local phenomenon. Do you have sufficient data to compile a holographic simulation?" }
 	cardTwoText { "Unidentified vessel travelling at sub warp speed, bearing 235.7. Fluctuations in energy readings from it, Captain. All transporters off. A strange set-up, but I'd say the graviton generator is depolarized. The dark colourings of the scrapes are the leavings of natural rubber, a type of non-conductive sole used by researchers experimenting with electricity. The molecules must have been partly de-phased by the anyon beam." }
