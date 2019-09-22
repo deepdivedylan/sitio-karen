@@ -64,18 +64,13 @@ try {
 		$mailgun = \Mailgun\Mailgun::create($mailgunConfig->apiKey);
 
 		// send the message
-		$result = $mailgun->messages()->send($mailgunConfig->domain, [
+		$mailgun->messages()->send($mailgunConfig->domain, [
 				"from" => "$name <$email>",
 				"to" => $mailgunConfig->recipient,
 				"subject" => $subject,
 				"text" => $message
 			]
 		);
-
-		// inform the user of the result
-		if($result->http_response_code !== 200) {
-			throw(new RuntimeException("unable to send email", $result->http_response_code));
-		}
 		$reply->message = "Thank you for reaching out. I'll be in contact shortly!";
 	}  else {
 		throw(new InvalidArgumentException("Invalid HTTP method request", 405));
