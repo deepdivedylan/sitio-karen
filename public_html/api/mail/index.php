@@ -64,7 +64,7 @@ try {
 		$mailgun = \Mailgun\Mailgun::create($mailgunConfig->apiKey);
 
 		// send the message
-		$result = $mailgun->sendMessage($mailgunConfig->domain, [
+		$result = $mailgun->messages()->send($mailgunConfig->domain, [
 				"from" => "$name <$email>",
 				"to" => $mailgunConfig->recipient,
 				"subject" => $subject,

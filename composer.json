@@ -2,7 +2,7 @@
 	"require": {
 		"google/recaptcha": "@stable",
 		"guzzlehttp/psr7": "@stable",
-		"mailgun/mailgun-php": "@stable",
+		"mailgun/mailgun-php": "^2.8.1",
 		"php-http/guzzle6-adapter": "@stable",
 		"ralouphie/getallheaders": "@stable",
 		"ext-intl": "*",
