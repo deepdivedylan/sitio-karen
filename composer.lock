@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "03d8112c8e6ed172021c9150a6d3e0e5",
+    "content-hash": "20f4cd3620e8fdb12eb4ef1ff22ea488",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -1190,7 +1190,8 @@
         "google/recaptcha": 0,
         "guzzlehttp/psr7": 0,
         "mailgun/mailgun-php": 0,
-        "php-http/guzzle6-adapter": 0
+        "php-http/guzzle6-adapter": 0,
+        "ralouphie/getallheaders": 0
     },
     "prefer-stable": false,
     "prefer-lowest": false,

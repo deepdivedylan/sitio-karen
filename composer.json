@@ -4,6 +4,7 @@
 		"guzzlehttp/psr7": "@stable",
 		"mailgun/mailgun-php": "@stable",
 		"php-http/guzzle6-adapter": "@stable",
+		"ralouphie/getallheaders": "@stable",
 		"ext-intl": "*",
 		"ext-json": "*"
 	}
