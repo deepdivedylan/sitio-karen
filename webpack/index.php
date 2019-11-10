@@ -39,6 +39,9 @@ $recaptcha = json_decode($_ENV["RECAPTCHA"]);
 					<li class="nav-item">
 						<a class="nav-link" href="#contact"><i class="fas fa-paper-plane"></i> <?php echo $translator->getTranslatedString("contactFormTitle"); ?></a>
 					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://wa.me/526611383592"><i class="fab fa-whatsapp"></i> <?php echo $translator->getTranslatedString("whatsapp"); ?></a>
+					</li>
 				</ul>
 				<ul class="navbar-nav">
 					<li class="nav-item">

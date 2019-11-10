@@ -19,4 +19,5 @@ es {
 	contactNameMessage { "Nombre es requerido" }
 	contactMessageMessage { "Mensaje es requerido" }
 	contactSubjectMessage { "Asunto es requerido" }
+	whatsapp { "Conecta con WhatsApp" }
 }

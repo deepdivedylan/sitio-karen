@@ -19,4 +19,5 @@ en {
 	contactNameMessage { "Name is required" }
 	contactMessageMessage { "Message is required" }
 	contactSubjectMessage { "Subject is required" }
+	whatsapp { "Connect with WhatsApp" }
 }
