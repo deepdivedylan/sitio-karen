@@ -125,7 +125,6 @@ export const validateContactForm = (event) => {
 };
 
 export const resize = () => {
-	const center = { lat: 32.5228039, lng: -117.0174018 };
 	const mainContainer = document.getElementById('mainContainer');
 	const mainWidth = mainContainer.offsetWidth;
 	const mapWidth = Math.floor(0.95 * mainWidth);
