@@ -1,5 +1,6 @@
 en {
 	changeLocale { "Espa&ntilde;ol" }
+	description { "At Corporativo Juridico Internacional, we specialize in personalized service in matters of international law and immigration. Trust in our experience and let us provide you with thoughtful individualized solutions." }
 	title { "Corporativo Juridico Internacional" }
 	home { "Home" }
 	lead { "Experienced Immigration Attorney" }

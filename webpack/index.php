@@ -16,6 +16,13 @@ if (empty($_SESSION["locale"]) === true) {
 }
 $translator = new Translator($locale);
 $recaptcha = json_decode($_ENV["RECAPTCHA"]);
+
+$previewData = (object)[
+	"description" => $translator->getTranslatedString("description"),
+	"image" => "https://" . $_SERVER["HTTP_HOST"] . "/images/globe-preview.png",
+	"title" => $translator->getTranslatedString("title"),
+	"url" => "https://" . $_SERVER["HTTP_HOST"] . "/",
+];
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $locale;?>">
@@ -24,6 +31,19 @@ $recaptcha = json_decode($_ENV["RECAPTCHA"]);
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 		<title><?php echo $translator->getTranslatedString("title"); ?></title>
+
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="<?php echo $previewData->url; ?>" />
+		<meta property="og:title" content="<?php echo $previewData->title; ?>" />
+		<meta property="og:description" content="<?php echo $previewData->description; ?>" />
+		<meta property="og:image" content="<?php echo $previewData->image; ?>" />
+
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:domain" value="<?php echo $previewData->url; ?>" />
+		<meta name="twitter:title" value="<?php echo $previewData->title; ?>" />
+		<meta name="twitter:description" value="<?php echo $previewData->description; ?>" />
+		<meta name="twitter:image" content="<?php echo $previewData->image; ?>" />
+		<meta name="twitter:url" value="<?php echo $previewData->url; ?>" />
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">

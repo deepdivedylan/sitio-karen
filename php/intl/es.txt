@@ -1,5 +1,6 @@
 es {
 	changeLocale { "English" }
+	description { "En Corporativo Juridico Internacional nos comprometemos en un trato personalizado en asuntos de derecho corporativo internacional y migraci&oacute;n. Te invitamos a conocer nuestras soluciones experimentados personalizados a tu necesidad." }
 	title { "Corporativo Juridico Internacional" }
 	home { "Inicio" }
 	lead { "Asesor&iacute;a Migratoria Experimentada" }
