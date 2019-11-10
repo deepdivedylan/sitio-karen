@@ -19,5 +19,6 @@ es {
 	contactNameMessage { "Nombre es requerido" }
 	contactMessageMessage { "Mensaje es requerido" }
 	contactSubjectMessage { "Asunto es requerido" }
+	map { "Ubicaci&oacute;n" }
 	whatsapp { "Conecta con WhatsApp" }
 }

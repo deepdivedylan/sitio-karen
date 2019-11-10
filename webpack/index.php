@@ -51,7 +51,7 @@ $recaptcha = json_decode($_ENV["RECAPTCHA"]);
 			</div>
 		</nav>
 
-		<main role="main" class="container">
+		<main id="mainContainer" role="main" class="container">
 			<div class="jumbotron">
 				<h1><?php echo $translator->getTranslatedString("title"); ?></h1>
 				<p class="lead"><?php echo $translator->getTranslatedString("lead"); ?></p>
@@ -135,6 +135,10 @@ $recaptcha = json_decode($_ENV["RECAPTCHA"]);
 				<button id="resetButton" class="btn btn-warning" type="reset"><i class="fa fa-ban"></i> Reset</button>
 			</form>
 			<div id="outputArea" class="alert"></div>
+			<div class="mt-3">
+				<h2><?php echo $translator->getTranslatedString("map"); ?></h2>
+				<div id="googleMap"></div>
+			</div>
 		</main>
 	</body>
 </html>
