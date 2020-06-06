@@ -21,5 +21,9 @@ en {
 	contactMessageMessage { "Message is required" }
 	contactSubjectMessage { "Subject is required" }
 	map { "Location" }
+	connect { "Connect" }
+	facebook { "Connect with Facebook" }
+	instagram { "Connect with Instagram" }
 	whatsapp { "Connect with WhatsApp" }
+	youtube { "Connect with YouTube" }
 }
