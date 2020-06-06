@@ -15,7 +15,7 @@ if (empty($_SESSION["locale"]) === true) {
 	$locale = $_SESSION["locale"];
 }
 $translator = new Translator($locale);
-$googleTagManager = $_ENV("GOOGLETAGMANAGER");
+$googleTagManager = $_ENV["GOOGLETAGMANAGER"];
 $recaptcha = json_decode($_ENV["RECAPTCHA"]);
 
 $previewData = (object)[
@@ -72,8 +72,14 @@ $previewData = (object)[
 					<li class="nav-item">
 						<a class="nav-link" href="#contact"><i class="fas fa-paper-plane"></i> <?php echo $translator->getTranslatedString("contactFormTitle"); ?></a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="https://wa.me/526611383592"><i class="fab fa-whatsapp"></i> <?php echo $translator->getTranslatedString("whatsapp"); ?></a>
+					<li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="far fa-comment-dots"></i> <?php echo $translator->getTranslatedString("connect"); ?></a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="https://www.facebook.com/Corporativo-Juridico-Internacional-335636916581870/"><i class="fab fa-facebook"></i> <?php echo $translator->getTranslatedString("facebook"); ?></a>
+                            <a class="dropdown-item" href="https://www.instagram.com/invites/contact/?i=11ybyhqcrfkan&utm_content=gdd6wod"><i class="fab fa-instagram"></i> <?php echo $translator->getTranslatedString("instagram"); ?></a>
+                            <a class="dropdown-item" href="https://wa.me/526611383592"><i class="fab fa-whatsapp"></i> <?php echo $translator->getTranslatedString("whatsapp"); ?></a>
+                            <a class="dropdown-item" href="https://www.youtube.com/channel/UCxyVG0Qr2GOP0WEi0L3VDwg"><i class="fab fa-youtube"></i> <?php echo $translator->getTranslatedString("youtube"); ?></a>
+                        </div>
 					</li>
 				</ul>
 				<ul class="navbar-nav">
