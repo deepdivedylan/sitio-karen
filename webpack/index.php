@@ -15,6 +15,7 @@ if (empty($_SESSION["locale"]) === true) {
 	$locale = $_SESSION["locale"];
 }
 $translator = new Translator($locale);
+$googleTagManager = $_ENV("GOOGLETAGMANAGER");
 $recaptcha = json_decode($_ENV["RECAPTCHA"]);
 
 $previewData = (object)[
@@ -32,6 +33,14 @@ $previewData = (object)[
 		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 		<title><?php echo $translator->getTranslatedString("title"); ?></title>
 
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','<?php echo $googleTagManager; ?>');</script>
+        <!-- End Google Tag Manager -->
+
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="<?php echo $previewData->url; ?>" />
 		<meta property="og:title" content="<?php echo $previewData->title; ?>" />
@@ -46,6 +55,10 @@ $previewData = (object)[
 		<meta name="twitter:url" value="<?php echo $previewData->url; ?>" />
 	</head>
 	<body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo $googleTagManager; ?>"
+                          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
 		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 			<a class="navbar-brand" href="/"><img class="nav-icon" src="/images/globe.png" /> <?php echo $translator->getTranslatedString("title"); ?></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
