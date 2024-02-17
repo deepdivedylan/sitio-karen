@@ -1,8 +1,29 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+vendor
+dist
+dist-ssr
+*.local
+.env
+
+# PHP temporary web server
+.php-tmp
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-/.idea
-/vendor
-/node_modules
-/public_html/index.php
-/public_html/dist
-/.gitsecret/keys/random_seed
-/.gitsecret/secrets/karen.env
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

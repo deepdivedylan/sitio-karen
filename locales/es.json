@@ -1,0 +1,45 @@
+{
+  "contact": {
+    "contact": "Contáctame",
+    "email": {
+      "label": "Correo Electrónico",
+      "placeholder": "¿Cómo te puedo hablar de regreso?"
+    },
+    "message": {
+      "label": "Mensaje",
+      "placeholder": "Cuéntame algo"
+    },
+    "name": {
+      "label": "Nombre",
+      "placeholder": "¿Quién habla?"
+    },
+    "result": {
+      "danger": "No se pudo mandar en mensaje.",
+      "success": "Mensaje enviado. Estamos en contacto."
+    },
+    "send": "Mandar Mensaje",
+    "subject": {
+      "label": "Asunto",
+      "placeholder": "¿De qué se trata?"
+    }
+  },
+  "home": {
+    "cardOneText": "Es un placer formar parte de tus proyectos de negocios o personales en materia de derecho corporativo o internacional, por ello te invito a conocer nuestra firma legal y considerar tu preferencia. Estamos para servirte en nuestros servicios de consultoria desde 2008.",
+    "cardOneTitle": "Representación legal",
+    "cardTwoText": "El movimiento de personas o negocios tanto en México como Estados Unidos es constante, por ello nos especializamos en asuntos internacionales, desde visas, permisos de trabajo, residencias, ciudadanía así como deportación (perdon-waiver), contratos, regularizacion de estatus migratorio, apostille, traducciones, entre otros servicios internacionales.",
+    "cardTwoTitle": "Consultoria de Inmigración",
+    "cardThreeText": "Nos comprometemos a brindar un trato personalizado, eficiente y de calidad, apostamos pasión en nuestro trabajo por la unificación de las familias divididas en los casos de deportación, por la seguridad y paz de los indocumentados en los diferentes paises, por una entidad de negocios sana, establecida legalmente.",
+    "cardThreeTitle": "Atención Personalizada",
+    "lead": "Asesoría Migratoria Experimentada",
+    "title": "Corporativo Jurídico Internacional"
+  },
+  "nav": {
+    "alt": "Change Language to English",
+    "contact": "Contacto",
+    "en": "English",
+    "es": "Español",
+    "home": "Inicio",
+    "location": "Ubicación",
+    "toggle": "Abrir Navigación"
+  }
+}
