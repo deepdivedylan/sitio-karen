@@ -18,7 +18,7 @@ $reply->status = 200;
 
 try {
     // load private data
-    $dotenv = Dotenv::createImmutable(dirname(__DIR__, 4));
+    $dotenv = Dotenv::createImmutable(dirname(__DIR__, 4), '.env.corpjuridicoint.com');
     $dotenv->load();
 
     //determine which HTTP method was used

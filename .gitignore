@@ -13,6 +13,7 @@ dist
 dist-ssr
 *.local
 .env
+.env.corpjuridicoint.com
 
 # PHP temporary web server
 .php-tmp
